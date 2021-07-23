@@ -44,7 +44,7 @@ namespace ExMVCFormsVsModelBinding.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost] // retrieve data after submission: get data from the server
         public IActionResult AddWithBinding(Student student) // model binding mapping with object
         {
             // validation code: data annotation in Student class
