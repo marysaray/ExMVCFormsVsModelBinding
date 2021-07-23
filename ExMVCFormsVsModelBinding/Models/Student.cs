@@ -26,12 +26,14 @@ namespace ExMVCFormsVsModelBinding.Models
         /// MM/DD/YYYY : Time is ignored.
         /// </summary>
         [Display(Name ="Date of Birth:")]
+        [DataType(DataType.Date)] // without time
         public DateTime DateOfBirth { get; set; }
 
         /// <summary>
         /// The student school email: @students.cptc.edu
         /// </summary>
         [Display(Name ="Email:")]
+        [DataType(DataType.EmailAddress)] // validation for email
         public string EmailAddress { get; set; }
 
         /// <summary>

@@ -37,5 +37,10 @@ namespace ExMVCFormsVsModelBinding.Controllers
 
             return View();
         }
+
+        public IActionResult AddWithBinding()
+        {
+            return View();
+        }
     }
 }
