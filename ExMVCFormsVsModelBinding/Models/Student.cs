@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,21 +19,25 @@ namespace ExMVCFormsVsModelBinding.Models
         /// <summary>
         /// The legal first and last name of the student.
         /// </summary>
+        [Display(Name ="Full Name:")]
         public string FullName { get; set; }
 
         /// <summary>
         /// MM/DD/YYYY : Time is ignored.
         /// </summary>
+        [Display(Name ="Date of Birth:")]
         public DateTime DateOfBirth { get; set; }
 
         /// <summary>
         /// The student school email: @students.cptc.edu
         /// </summary>
+        [Display(Name ="Email:")]
         public string EmailAddress { get; set; }
 
         /// <summary>
         /// Best way to contact via phone.
         /// </summary>
+        [Display(Name ="Phone Number:")]
         public string PhoneNumber { get; set; }
     }
 }
