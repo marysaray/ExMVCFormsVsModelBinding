@@ -20,6 +20,7 @@ namespace ExMVCFormsVsModelBinding.Models
         /// The legal first and last name of the student.
         /// </summary>
         [Display(Name ="Full Name:")]
+        [Required(ErrorMessage ="Please enter a name.")]
         public string FullName { get; set; }
 
         /// <summary>
@@ -34,12 +35,15 @@ namespace ExMVCFormsVsModelBinding.Models
         /// </summary>
         [Display(Name ="Email:")]
         [DataType(DataType.EmailAddress)] // validation for email
+        [EmailAddress]
+        [Required]
         public string EmailAddress { get; set; }
 
         /// <summary>
         /// Best way to contact via phone.
         /// </summary>
         [Display(Name ="Phone Number:")]
+        [Required]
         public string PhoneNumber { get; set; }
     }
 }

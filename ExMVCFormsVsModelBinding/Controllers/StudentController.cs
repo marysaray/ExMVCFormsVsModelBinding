@@ -38,8 +38,22 @@ namespace ExMVCFormsVsModelBinding.Controllers
             return View();
         }
 
+        [HttpGet] // navigates to form linked to URL
         public IActionResult AddWithBinding()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddWithBinding(Student student) // model binding mapping with object
+        {
+            // validation code: data annotation in Student class
+            if (ModelState.IsValid) // true if all validation in model passes
+            {
+                // display message
+                ViewData["Message"] = $"{student.FullName} was successfully added!";
+                // Add to database here...
+            }
             return View();
         }
     }
