@@ -3,33 +3,42 @@
     ViewData["Title"] = "Add new Student";
 }
 
-<h1>Add new Student</h1>
+@*show form if they are not added*@
+@if (ViewData["Added"] == null)
+{
+    <h1>Add new Student</h1>
 
-@* create html form to add data to class*@
+    @* create html form to add data to class*@
 
-@*
-    get: great for bookmarking a page - populates in the internet history
-    post: send data without putting it in the url
-*@
-<form method="post">
-    @*inputs for all the properties*@
+    @*
+        get: great for bookmarking a page - populates in the internet history
+        post: send data without putting it in the url
+    *@
+    <form method="post">
+        @*inputs for all the properties*@
 
-    <label>Full Name:</label>
-    <input type="text" name="full-name" />
-    <br />
+        <label>Full Name:</label>
+        <input type="text" name="full-name" />
+        <br />
 
-    <label>Date of Birth:</label>
-    <input type="text" name="dob" />
-    <br />
+        <label>Date of Birth:</label>
+        <input type="text" name="dob" />
+        <br />
 
-    <label>Student Email:</label>
-    <input type="text" name="email" />
-    <br />
+        <label>Student Email:</label>
+        <input type="text" name="email" />
+        <br />
 
-    <label>Phone Number:</label>
-    <input type="text" name="phone" />
-    <br />
+        <label>Phone Number:</label>
+        <input type="text" name="phone" />
+        <br />
 
-    @*submit form*@
-    <input type="submit" value="Add Student" />
-</form>
+        @*submit form*@
+        <input type="submit" value="Add Student" />
+    </form>
+
+}
+else 
+{
+    <p>Added successfully!</p>
+}

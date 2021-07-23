@@ -10,7 +10,7 @@ namespace ExMVCFormsVsModelBinding.Controllers
 {
     public class StudentController : Controller
     {
-        // Add student to database: attribute are placed above the method with []
+        // attribute are placed above the method with []
 
         [HttpGet] // navigates to form linked to URL
         public IActionResult Add()
@@ -21,12 +21,19 @@ namespace ExMVCFormsVsModelBinding.Controllers
         [HttpPost] // retrieve data after submission: get data from the server
         public IActionResult Add(IFormCollection form)
         {
+            // TODO: server-side validation for all data
+
             // extract data: create instance of student object
             Student stu = new Student();
             stu.FullName = form["full-name"];
             stu.DateOfBirth = Convert.ToDateTime(form["dob"]); // convert to datetime
             stu.PhoneNumber = form["phone"];
             stu.EmailAddress = form["email"];
+
+            // Add student to database: 
+
+            // display message and hide form
+            ViewData["Added"] = true;
 
             return View();
         }
