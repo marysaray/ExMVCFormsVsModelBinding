@@ -27,3 +27,4 @@ HTML Forms vs ASP.NET Core Model Binding
         * Validate data
         * Add to database
 
+Partial View Resource: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/partial?view=aspnetcore-3.1
