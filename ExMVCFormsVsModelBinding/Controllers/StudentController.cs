@@ -33,7 +33,7 @@ namespace ExMVCFormsVsModelBinding.Controllers
             // Add student to database: 
 
             // display message and hide form
-            ViewData["Added"] = true;
+            ViewData["Added"] = stu.FullName + " was added with an ID of 1";
 
             return View();
         }

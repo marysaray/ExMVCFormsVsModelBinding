@@ -14,31 +14,37 @@
         get: great for bookmarking a page - populates in the internet history
         post: send data without putting it in the url
     *@
-    <form method="post">
-        @*inputs for all the properties*@
+<form method="post">
+    @*inputs for all the properties*@
 
+    <div class="form-group">
         <label>Full Name:</label>
-        <input type="text" name="full-name" />
-        <br />
+        <input class="form-control" type="text" name="full-name" />
+    </div>
 
+    <div class="form-group">
         <label>Date of Birth:</label>
-        <input type="text" name="dob" />
-        <br />
+        <input class="form-control" type="text" name="dob" />
+    </div>
 
+    <div class="form-group">
         <label>Student Email:</label>
-        <input type="text" name="email" />
-        <br />
+        <input class="form-control" type="text" name="email" />
+    </div>
 
+    <div class="form-group">
         <label>Phone Number:</label>
-        <input type="text" name="phone" />
-        <br />
+        <input class="form-control" type="text" name="phone" />
+    </div>
 
-        @*submit form*@
-        <input type="submit" value="Add Student" />
-    </form>
+    @*submit form*@
+    <input type="submit" value="Add Student" />
+</form>
 
 }
-else 
+else /*form has been added*/
 {
-    <p>Added successfully!</p>
+    <div class="alert alert-success">
+        @ViewData["Added"]
+    </div>
 }
